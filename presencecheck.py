@@ -1,19 +1,17 @@
-#!/usr/bin/python
+#!\user\bin\python
 
 import requests
 import json
 import time
 
-data = json.load(open("data.json", "rb"))
+data = json.load(open("data.json","rb"))
 
 url="https://slack.com/api/users.getPresence"
-payload={"token": data['token'],"user": data['user']}
+payload={"token":data["token"],"user":data["user"]}
 headers={}
 r=requests.post(url,data=payload,headers=headers)
 
 response = json.loads(r.text)
 
-while response["presence"] == "away":
-	time.sleep(5)
-	print (response["presence"])
+resp = response["presence"] 
 	
