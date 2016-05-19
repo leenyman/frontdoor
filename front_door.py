@@ -23,5 +23,6 @@ while True:
 		if current_state:
 			#camera.start_preview()
 			camera.capture('capture.jpg')
+			execfile("apiupload.py")
 		#else:
 			#camera.stop_preview()
