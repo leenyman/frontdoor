@@ -1,4 +1,4 @@
-# frontdoor
+# Front Door Camera
 Rapsberry Pi camera and sensor to see who's at the front door.
 
 ## Resources 
