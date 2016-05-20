@@ -15,9 +15,9 @@ Rapsberry Pi camera and sensor to see who's at the front door.
 
 ## data.json
 This project expects a file called data.json formatted like the below snippit example to be in the same directory.
-```json
+```
 {
-    "token" : `"Insert your token ID here"` ,
-    "user" : `"Insert your user ID here"`
+    "token" : *"Insert your token ID here"* ,
+    "user" : *"Insert your user ID here"*
 }
 ```
