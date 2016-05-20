@@ -1,9 +1,9 @@
 # frontdoor
-rapsberry pi camera and sensor to see whos at the front door
+Rapsberry Pi camera and sensor to see who's at the front door.
 
 ## Resources 
--https://www.raspberrypi.org
--https://api.slack.com/
+- https://www.raspberrypi.org
+- https://api.slack.com/
 
 ## Setup
 1. Win10 
