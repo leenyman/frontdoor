@@ -1,4 +1,4 @@
-#!\user\bin\python
+#!/user/bin/python
 
 import requests
 import json

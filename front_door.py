@@ -3,6 +3,7 @@
 import RPi.GPIO as GPIO
 import time
 import picamera
+import presencecheck
 
 sensor = 4
 camera = picamera.PiCamera()
@@ -14,15 +15,10 @@ previous_state = False
 current_state = False
 
 while True:
-	time.sleep(0.1)
-	previous_state = current_state
 	current_state = GPIO.input(sensor)
-	if current_state != previous_state:
-		new_state = "HIGH" if current_state else "LOW"
-		print("GPIO pin %s is %s" % (sensor, new_state))
-		if current_state:
-			#camera.start_preview()
-			camera.capture('capture.jpg')
-			execfile("apiupload.py")
-		#else:
-			#camera.stop_preview()
+	if current_state and presencecheck.pres_chk() =="away":
+		camera.capture('capture.jpg')
+		execfile("apiupload.py")
+		time.sleep(60)
+	else:
+                time.sleep(.5)
