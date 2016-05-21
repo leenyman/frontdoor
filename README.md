@@ -1,23 +1,24 @@
-# Front Door Camera
-Rapsberry Pi camera and sensor to see who's at the front door.
+# frontdoor
+A Raspberry Pi project using PiCamera and a motion sensor to see who is at the front door.
 
 ## Resources 
-- https://www.raspberrypi.org
-- https://api.slack.com/
+- [https://www.raspberrypi.org]
+- [https://api.slack.com/]
 
 ## Setup
-1. Win10 
-2. Raspberry Pi
+1. Raspberry Pi
+2. Python 2.7
 
 ## Components
 1. Camera 
 2. Motion Sensor
 
 ## data.json
-This project expects a file called data.json formatted like the below snippit example to be in the same directory.
+This project expects a file called *data.json* to be in the project's base directory.
+It should be formatted like this:
 ```json
 {
-    "token" : "Insert your token ID here" ,
-    "user" : "Insert your user ID here"
+    "token" : "xxxx-xxxxx-xxxxx-xxxxx",
+    "user" : "yyyyyy"
 }
 ```
