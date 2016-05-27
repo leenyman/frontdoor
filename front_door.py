@@ -3,7 +3,7 @@
 import RPi.GPIO as GPIO
 import time
 import picamera
-import presencecheck
+import slack_api
 
 sensor = 4
 camera = picamera.PiCamera()
@@ -16,9 +16,9 @@ current_state = False
 
 while True:
 	current_state = GPIO.input(sensor)
-	if current_state and presencecheck.pres_chk() =="away":
+	if current_state and slack_api.check() =="away":
 		camera.capture('capture.jpg')
-		execfile("apiupload.py")
+		slack_api.upload()
 		time.sleep(60)
 	else:
                 time.sleep(.5)
