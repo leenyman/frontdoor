@@ -18,7 +18,10 @@ while True:
 	current_state = GPIO.input(sensor)
 	if current_state and slack_api.check() =="away":
 		camera.capture('capture.jpg')
+		print("captured")
 		slack_api.upload()
+		print("uploaded")
 		time.sleep(60)
+		print("slept")
 	else:
                 time.sleep(.5)
