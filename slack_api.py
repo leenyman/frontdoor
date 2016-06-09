@@ -8,8 +8,8 @@ presence_url="https://slack.com/api/users.getPresence"
 
 def upload():
 	f = {"file": open("capture.jpg", "rb")}
-	payload = {"token": data['token'], "filename" : "front door capture", "channels": "#tap_u_tigers", "fileype": "jpg", "pretty" : 1}
-	message = {"token": data['token'], "text": "@here someone is at the front door", "channel": "#tap_u_tigers", "parse": "full", 	"as_user": "true", "pretty" : 1}
+	payload = {"token": data['token'], "filename" : "front door capture", "channels": data['channel'], "filetype": "jpg", "pretty" : 1}
+	message = {"token": data['token'], "text": "@here someone is at the front door", "channel": data['channel'], "parse": "full", 	"as_user": "true", "pretty" : 1}
 	requests.post(message_url, params=message)
 	requests.post(upload_url,params=payload,files = f)
 	return
