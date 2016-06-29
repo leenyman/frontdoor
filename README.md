@@ -19,7 +19,7 @@ It should be formatted like this:
 ```json
 {
     "token" : "xxxx-xxxxx-xxxxx-xxxxx",
-    "user" : "yyyyyy"
+    "user" : "yyyyyy",
 	"channel" : "#channel"
 }
 ```
