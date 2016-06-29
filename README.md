@@ -20,5 +20,6 @@ It should be formatted like this:
 {
     "token" : "xxxx-xxxxx-xxxxx-xxxxx",
     "user" : "yyyyyy"
+	"channel" : "#channel"
 }
 ```
